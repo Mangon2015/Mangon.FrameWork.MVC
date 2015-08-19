@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7FDA65B8-47D7-4F0B-9165-DB10F772D1D3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Mangon.FrameWork</RootNamespace>
+    <AssemblyName>Mangon.FrameWork</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Core\AbstractFactory.cs" />
+    <Compile Include="Core\Bootstrap.cs" />
+    <Compile Include="Core\BootstrapEventCollection.cs" />
+    <Compile Include="Core\CommonExtend.cs" />
+    <Compile Include="Core\Global.cs" />
+    <Compile Include="Core\IBootdtstrap.cs" />
+    <Compile Include="Core\KeyValueCollection.cs" />
+    <Compile Include="Elements\SerializableDictionary.cs" />
+    <Compile Include="InterFace\IConfig.cs" />
+    <Compile Include="InterFace\ICore.cs" />
+    <Compile Include="InterFace\IElement.cs" />
+    <Compile Include="InterFace\IFactory.cs" />
+    <Compile Include="InterFace\IPackage.cs" />
+    <Compile Include="Package\Config\Config.cs" />
+    <Compile Include="Package\Config\IConfig.cs" />
+    <Compile Include="Package\DataStorage.cs" />
+    <Compile Include="Package\Encode\Base64.cs" />
+    <Compile Include="Package\Encode\Html.cs" />
+    <Compile Include="Package\Encode\Json.cs" />
+    <Compile Include="Package\Encode\JsonParser\DynamicJsonConverter.cs" />
+    <Compile Include="Package\Encode\JsonParser\DynamicJsonObject.cs" />
+    <Compile Include="Package\Encode\JsonParser\DynamicJsonObjectConverter.cs" />
+    <Compile Include="Package\Encode\JsonParser\ReadOnlyDictionary.cs" />
+    <Compile Include="Package\Encode\Xml.cs" />
+    <Compile Include="Package\Encryption\MD5Encryption.cs" />
+    <Compile Include="Package\Encryption\Randoms.cs" />
+    <Compile Include="Package\EntityFramework\DataBaseBase.cs" />
+    <Compile Include="Package\EntityFramework\DataBaseContext.cs" />
+    <Compile Include="Package\EntityFramework\Element\EntityKey.cs" />
+    <Compile Include="Package\EntityFramework\Element\EntityProperties.cs" />
+    <Compile Include="Package\EntityFramework\EventCollection.cs" />
+    <Compile Include="Package\EntityFramework\InterFace\IDataBase.cs" />
+    <Compile Include="Package\EntityFramework\InterFace\IDbContext.cs" />
+    <Compile Include="Package\EntityFramework\InterFace\IManage.cs" />
+    <Compile Include="Package\EntityFramework\InterFace\ISearch.cs" />
+    <Compile Include="Package\EntityFramework\InterFace\ISearchInModel.cs" />
+    <Compile Include="Package\EntityFramework\InterFace\ISearchInModelOutCount.cs" />
+    <Compile Include="Package\EntityFramework\InterFace\ISearchInModelUnLimit.cs" />
+    <Compile Include="Package\EntityFramework\InterFace\ISearchOutCount.cs" />
+    <Compile Include="Package\EntityFramework\InterFace\ISearchUnLimit.cs" />
+    <Compile Include="Package\EntityFramework\SearchModelServiceBase.cs" />
+    <Compile Include="Package\EntityFramework\Sort.cs" />
+    <Compile Include="Package\Excption\ACLLoginExcption.cs" />
+    <Compile Include="Package\ExpressionUtil\BinaryExpressionFingerprint.cs" />
+    <Compile Include="Package\ExpressionUtil\CachedExpressionCompiler.cs" />
+    <Compile Include="Package\ExpressionUtil\ConditionalExpressionFingerprint.cs" />
+    <Compile Include="Package\ExpressionUtil\ConstantExpressionFingerprint.cs" />
+    <Compile Include="Package\ExpressionUtil\DefaultExpressionFingerprint.cs" />
+    <Compile Include="Package\ExpressionUtil\ExpressionFingerprint.cs" />
+    <Compile Include="Package\ExpressionUtil\ExpressionFingerprintChain.cs" />
+    <Compile Include="Package\ExpressionUtil\FingerprintingExpressionVisitor.cs" />
+    <Compile Include="Package\ExpressionUtil\HashCodeCombiner.cs" />
+    <Compile Include="Package\ExpressionUtil\Hoisted`2.cs" />
+    <Compile Include="Package\ExpressionUtil\HoistingExpressionVisitor.cs" />
+    <Compile Include="Package\ExpressionUtil\IndexExpressionFingerprint.cs" />
+    <Compile Include="Package\ExpressionUtil\LambdaExpressionFingerprint.cs" />
+    <Compile Include="Package\ExpressionUtil\MemberExpressionFingerprint.cs" />
+    <Compile Include="Package\ExpressionUtil\MethodCallExpressionFingerprint.cs" />
+    <Compile Include="Package\ExpressionUtil\ParameterExpressionFingerprint.cs" />
+    <Compile Include="Package\ExpressionUtil\TypeBinaryExpressionFingerprint.cs" />
+    <Compile Include="Package\ExpressionUtil\UnaryExpressionFingerprint.cs" />
+    <Compile Include="Package\Http\abApiReader.cs" />
+    <Compile Include="Package\Img\Config.cs" />
+    <Compile Include="Package\Img\ValidateCodeImg.cs" />
+    <Compile Include="Package\Index\BigDictionary.cs" />
+    <Compile Include="Package\Language\PinYin.cs" />
+    <Compile Include="Package\Language\StringLang.cs" />
+    <Compile Include="Package\LinqExtend\Dynamic.cs" />
+    <Compile Include="Package\LinqExtend\ExpressionHelper.cs" />
+    <Compile Include="Package\LinqExtend\LinqExpression.cs" />
+    <Compile Include="Package\LinqExtend\LinqSet\LinqSet.cs" />
+    <Compile Include="Package\LinqExtend\PredicateBase.cs" />
+    <Compile Include="Package\LinqExtend\PredicateOrder.cs" />
+    <Compile Include="Package\LinqExtend\PredicateSet.cs" />
+    <Compile Include="Package\LinqExtend\PredicateWhere.cs" />
+    <Compile Include="Package\LinqExtend\Utility.cs" />
+    <Compile Include="Package\Paginator\Page.cs" />
+    <Compile Include="Package\Paginator\PageSet.cs" />
+    <Compile Include="Package\Paginator\Paginator.cs" />
+    <Compile Include="Package\Paginator\PaginatorBase.cs" />
+    <Compile Include="Package\Paginator\PaginatorSet.cs" />
+    <Compile Include="Package\Queue\Interface\IActuator.cs" />
+    <Compile Include="Package\Queue\Interface\IQueueServer.cs" />
+    <Compile Include="Package\Queue\Interface\ITaskElement.cs" />
+    <Compile Include="Package\Queue\LogWriter\LogWriterActuator.cs" />
+    <Compile Include="Package\Queue\LogWriter\LogWriterQueue.cs" />
+    <Compile Include="Package\Queue\LogWriter\LogWriterTask.cs" />
+    <Compile Include="Package\Queue\MultipleQueueServer.cs" />
+    <Compile Include="Package\Queue\SingleQueueServer.cs" />
+    <Compile Include="Package\Queue\ThreadPoolServer.cs" />
+    <Compile Include="Package\Repository\GlobalObject.cs" />
+    <Compile Include="Package\ScheduledTasks\ScheduledService.cs" />
+    <Compile Include="Package\ScheduledTasks\TaskEvent.cs" />
+    <Compile Include="Package\ScheduledTasks\TaskType.cs" />
+    <Compile Include="Package\Sender\Email.cs" />
+    <Compile Include="Package\Storage\CacheStorage.cs" />
+    <Compile Include="Package\Storage\CookiesStorage.cs" />
+    <Compile Include="Package\Storage\DataCacheModel.cs" />
+    <Compile Include="Package\Storage\FilesStorage.cs" />
+    <Compile Include="Package\Storage\IStorage.cs" />
+    <Compile Include="Package\Storage\SessionStorage.cs" />
+    <Compile Include="Package\Storage\SimplyCacheStorage.cs" />
+    <Compile Include="Package\Storage\StorageFactory.cs" />
+    <Compile Include="Package\Storage\LRUCache.cs" />
+    <Compile Include="Package\SystemExtension\Clone.cs" />
+    <Compile Include="Package\SystemExtension\DataTable.cs" />
+    <Compile Include="Package\SystemExtension\DateTime.cs" />
+    <Compile Include="Package\SystemExtension\Dictionary.cs" />
+    <Compile Include="Package\SystemExtension\Enums.cs" />
+    <Compile Include="Package\SystemExtension\IEnumerable.cs" />
+    <Compile Include="Package\SystemExtension\IList.cs" />
+    <Compile Include="Package\SystemExtension\Object.cs" />
+    <Compile Include="Package\SystemExtension\String.cs" />
+    <Compile Include="Package\SystemExtension\Web.cs" />
+    <Compile Include="Package\Valid\FormatElement.cs" />
+    <Compile Include="Package\Valid\Format\Format.cs" />
+    <Compile Include="Package\Valid\Format\FormatDict.cs" />
+    <Compile Include="Package\Valid\Format\FormatElements\Alnum.cs" />
+    <Compile Include="Package\Valid\Format\FormatElements\Alpha.cs" />
+    <Compile Include="Package\Valid\Format\FormatElements\Bool.cs" />
+    <Compile Include="Package\Valid\Format\FormatElements\DateTime.cs" />
+    <Compile Include="Package\Valid\Format\FormatElements\Digits.cs" />
+    <Compile Include="Package\Valid\Format\FormatElements\FLoat.cs" />
+    <Compile Include="Package\Valid\Format\FormatElements\FLoatstr.cs" />
+    <Compile Include="Package\Valid\Format\FormatElements\HtmlDecode.cs" />
+    <Compile Include="Package\Valid\Format\FormatElements\HtmlEncode.cs" />
+    <Compile Include="Package\Valid\Format\FormatElements\Int.cs" />
+    <Compile Include="Package\Valid\Format\FormatElements\Intstr.cs" />
+    <Compile Include="Package\Valid\Format\FormatElements\MD5.cs" />
+    <Compile Include="Package\Valid\Format\FormatElements\String.cs" />
+    <Compile Include="Package\Valid\Format\FormatElements\ToType.cs" />
+    <Compile Include="Package\Valid\IValidElement.cs" />
+    <Compile Include="Package\Valid\VaildItem.cs" />
+    <Compile Include="Package\Valid\ValidateElement.cs" />
+    <Compile Include="Package\Valid\Validate\ValidateDict.cs" />
+    <Compile Include="Package\Valid\Validate\ValidateElements\Alnum.cs" />
+    <Compile Include="Package\Valid\Validate\ValidateElements\Alpha.cs" />
+    <Compile Include="Package\Valid\Validate\ValidateElements\Array.cs" />
+    <Compile Include="Package\Valid\Validate\ValidateElements\Between.cs" />
+    <Compile Include="Package\Valid\Validate\ValidateElements\GreaterThan.cs" />
+    <Compile Include="Package\Valid\Validate\ValidateElements\IsChinese.cs" />
+    <Compile Include="Package\Valid\Validate\ValidateElements\IsChineseTel.cs" />
+    <Compile Include="Package\Valid\Validate\ValidateElements\IsDateTime.cs" />
+    <Compile Include="Package\Valid\Validate\ValidateElements\IsEmail.cs" />
+    <Compile Include="Package\Valid\Validate\ValidateElements\IsFloat.cs" />
+    <Compile Include="Package\Valid\Validate\ValidateElements\IsHex.cs" />
+    <Compile Include="Package\Valid\Validate\ValidateElements\IsHttpUrl.cs" />
+    <Compile Include="Package\Valid\Validate\ValidateElements\IsIDCard.cs" />
+    <Compile Include="Package\Valid\Validate\ValidateElements\IsInt.cs" />
+    <Compile Include="Package\Valid\Validate\ValidateElements\IsIp.cs" />
+    <Compile Include="Package\Valid\Validate\ValidateElements\IsMobile.cs" />
+    <Compile Include="Package\Valid\Validate\ValidateElements\IsNumber.cs" />
+    <Compile Include="Package\Valid\Validate\ValidateElements\IsPostCode.cs" />
+    <Compile Include="Package\Valid\Validate\ValidateElements\IsRegex.cs" />
+    <Compile Include="Package\Valid\Validate\ValidateElements\IsSafeChar.cs" />
+    <Compile Include="Package\Valid\Validate\ValidateElements\IsTime.cs" />
+    <Compile Include="Package\Valid\Validate\ValidateElements\IsType.cs" />
+    <Compile Include="Package\Valid\Validate\ValidateElements\LessThan.cs" />
+    <Compile Include="Package\Valid\Validate\ValidateElements\NotEmpty.cs" />
+    <Compile Include="Package\Valid\Validate\ValidateElements\StringLength.cs" />
+    <Compile Include="Package\Valid\Validate\ValidateList.cs" />
+    <Compile Include="Package\Valid\Valider.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Result\AJaxResult.cs" />
+    <Compile Include="Result\IResult.cs" />
+    <Compile Include="Result\IResultError.cs" />
+    <Compile Include="Result\IResult_T.cs" />
+    <Compile Include="Result\Result.cs" />
+    <Compile Include="Result\Result_T.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
