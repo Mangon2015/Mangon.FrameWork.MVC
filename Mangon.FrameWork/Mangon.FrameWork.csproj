@@ -107,6 +107,7 @@
     <Compile Include="Package\Encode\JsonParser\DynamicJsonObject.cs" />
     <Compile Include="Package\Encode\JsonParser\DynamicJsonObjectConverter.cs" />
     <Compile Include="Package\Encode\JsonParser\ReadOnlyDictionary.cs" />
+    <Compile Include="Package\Encode\Unicode.cs" />
     <Compile Include="Package\Encode\Xml.cs" />
     <Compile Include="Package\Encryption\MD5Encryption.cs" />
     <Compile Include="Package\Encryption\Randoms.cs" />
